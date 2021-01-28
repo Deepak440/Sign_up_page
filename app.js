@@ -53,6 +53,10 @@ app.post("/" ,function(req ,res)
 });
 
 });
+app.post("/failiure" , function(req ,res)
+{
+    res.redirect("/");
+})
 
 app.listen(3000 , function(req, res)
 {
