@@ -40,15 +40,14 @@ app.post("/" ,function(req ,res)
    request(options , function(error , response, body ){
        if(error)
        {
-           res.send("Error! with sign up. PLease try again!");
+           res.sendFile(__dirname + "/fail.html");
        }else{
            
         if(response.statusCode === 200){
-        res.send("Successfully SUbscribed");
+        res.sendFile(__dirname + "/success.html");
        }
         else{
-            res.send("Error!");
-
+            res.sendFile(__dirname + "/fail.html");
         }
     }
 });
